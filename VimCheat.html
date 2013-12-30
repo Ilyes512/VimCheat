@@ -1,0 +1,574 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>VimCheat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: GitHub
+Author: Brett Terpstra
+Description: Github README style. Includes theme for Pygmentized code blocks.
+*/
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:13.34px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.4;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:14px;line-height:1.6}#wrapper>*:first-child{margin-top:0!important}#wrapper>*:last-child{margin-bottom:0!important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca,0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{margin:20px 0 10px;padding:0;font-weight:bold;-webkit-font-smoothing:subpixel-antialiased;cursor:text}h1{font-size:28px;color:#000}h2{font-size:24px;border-bottom:1px solid #ccc;color:#000}h3{font-size:18px;color:#333}h4{font-size:16px;color:#333}h5{font-size:14px;color:#333}h6{color:#777;font-size:14px}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas,'Liberation Mono',Courier,monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:0;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre code,pre tt{background-color:transparent;border:0}.poetry pre{font-family:Georgia,Garamond,serif!important;font-style:italic;font-size:110%!important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia,Garamond,serif!important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:0}code{background-color:#fff;color:#333!important;padding:0 .2em;border:1px solid #dedede}pre{background:#fff}pre code{background-color:white!important;overflow:visible}}@media screen{body.inverted{color:#eee!important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr .inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee!important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted h2{border-color:#555}.inverted hr{border-color:#777;border-width:1px!important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eee}code span::selection{background-color:rgba(0,0,0,0.7)!important;color:#eee!important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086b3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#eaf2f5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2b91af}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#a31515}
+</style>
+
+</head>
+<body class="normal">
+  <div id="wrapper">
+      <h1 id="vimcheatsheet">VIM cheat sheet</h1>
+
+<h2 id="normalmode-navigation">normal mode - navigation</h2>
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Basic Navigation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">h</td>
+	<td style="text-align:left;">&#8592;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">j</td>
+	<td style="text-align:left;">&#8595;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">k</td>
+	<td style="text-align:left;">&#8593;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">l</td>
+	<td style="text-align:left;">&#8594;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">[space]</td>
+	<td style="text-align:left;">Move to the right or go to next line if at end of line</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Letter Navigation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">f + &lt;char&gt;</td>
+	<td style="text-align:left;">Move to next inline &lt;char&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + F + &lt;char&gt;</td>
+	<td style="text-align:left;">Move to previous inline &lt;char&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">t + &lt;char&gt;</td>
+	<td style="text-align:left;">Move just before the next inline &lt;char&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + T + &lt;char&gt;</td>
+	<td style="text-align:left;">Move just before the previous inline &lt;char&gt;</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Word Navigation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">h</td>
+	<td style="text-align:left;">&#8592;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">w</td>
+	<td style="text-align:left;">Go to the start of the next word</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + W</td>
+	<td style="text-align:left;">Go to the start of the next WORD</td>
+</tr>
+<tr>
+	<td style="text-align:center;">e</td>
+	<td style="text-align:left;">Go to the end of the next word</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + E</td>
+	<td style="text-align:left;">Go to the end of the next WORD</td>
+</tr>
+<tr>
+	<td style="text-align:center;">b</td>
+	<td style="text-align:left;">Go to the start of the previous word</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + B</td>
+	<td style="text-align:left;">Go to the start of the previous WORD</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">word / WORD</th>
+	<th style="text-align:left;">Example</th>
+	<th style="text-align:left;"># of words</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">word</td>
+	<td style="text-align:left;">Home</td>
+	<td style="text-align:left;">1</td>
+</tr>
+<tr>
+	<td style="text-align:center;">WORD</td>
+	<td style="text-align:left;">one-two</td>
+	<td style="text-align:left;">3</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Paragraph Navigation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">&#8679; <code>+ {</code></td>
+	<td style="text-align:left;">Go to the previous paragraph</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; <code>+ }</code></td>
+	<td style="text-align:left;">Go to the next paragraph</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">File Navigation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">gg</td>
+	<td style="text-align:left;">Go to start of file</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + G</td>
+	<td style="text-align:left;">Go to end of file</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&lt;i&gt; + &#8679; + G</td>
+	<td style="text-align:left;">Go to start of line &lt;i&gt; #1</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:&lt;i&gt;</td>
+	<td style="text-align:left;">Go to start of line &lt;i&gt; #2</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:&lt;i&gt;</td>
+	<td style="text-align:left;">Go to start of line &lt;i&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + $</td>
+	<td style="text-align:left;">Go to end of line</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + ^</td>
+	<td style="text-align:left;">Go to start of line (non-WS*)</td>
+</tr>
+<tr>
+	<td style="text-align:center;">0</td>
+	<td style="text-align:left;">Go to start of line</td>
+</tr>
+</tbody>
+</table>
+<p>* non-whitespace</p>
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">History</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">u</td>
+	<td style="text-align:left;">Undo</td>
+</tr>
+<tr>
+	<td style="text-align:center;"><code>ctrl</code> + r</td>
+	<td style="text-align:left;">Redo</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Search</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">/&lt;search&gt;</td>
+	<td style="text-align:left;">Search(can be regex) and move forworth</td>
+</tr>
+<tr>
+	<td style="text-align:center;">n</td>
+	<td style="text-align:left;">Find next</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + N</td>
+	<td style="text-align:left;">Find previous (backward)</td>
+</tr>
+<tr>
+	<td style="text-align:center;">?&lt;search&gt;</td>
+	<td style="text-align:left;">Search and move backwards</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:set incsearch</td>
+	<td style="text-align:left;">Incremental search</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:set ignorecase</td>
+	<td style="text-align:left;">Ignore case when searching</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:set hlsearch</td>
+	<td style="text-align:left;">Highlight search result\&#8217;s</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:nohlsearch / :noh</td>
+	<td style="text-align:left;">Disable hightligting search result\&#8217;s</td>
+</tr>
+<tr>
+	<td style="text-align:center;">d/&lt;search&gt;</td>
+	<td style="text-align:left;">Delete everything up to first search result</td>
+</tr>
+<tr>
+	<td style="text-align:center;">c/&lt;search&gt;</td>
+	<td style="text-align:left;">Delete everything up to first search result + &lt;insert&gt;-mode</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Search and replace</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">:s/&lt;a&gt;/&lt;b&gt;</td>
+	<td style="text-align:left;">Replace &lt;a&gt; with &lt;b&gt; on the current line</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:%s/&lt;a&gt;/&lt;b&gt;</td>
+	<td style="text-align:left;">Replace first occurance of &lt;a&gt; with &lt;b&gt; on every line</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:%s/&lt;a&gt;/&lt;b&gt;/gc</td>
+	<td style="text-align:left;">Replace all occurances of &lt;a&gt; with &lt;b&gt; in the file</td>
+</tr>
+<tr>
+	<td style="text-align:center;">:[&#8230;]/gci</td>
+	<td style="text-align:left;">Flags: global, comfirm, insensitive (case)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong>
+When you have your cursor on a bracket/parentesis/&#8230; you can press <code>v + %</code> to select everything within. You can then continue and search (and replace) withing the selection.</p>
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Delete</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">x</td>
+	<td style="text-align:left;">Delete char</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + X</td>
+	<td style="text-align:left;">Delete char before cursor</td>
+</tr>
+<tr>
+	<td style="text-align:center;">r</td>
+	<td style="text-align:left;">Replace char</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + R</td>
+	<td style="text-align:left;">&lt;replace&gt;-mode (overwrite)</td>
+</tr>
+<tr>
+	<td style="text-align:center;">dw</td>
+	<td style="text-align:left;">Delete word</td>
+</tr>
+<tr>
+	<td style="text-align:center;">db</td>
+	<td style="text-align:left;">Delete previous word</td>
+</tr>
+<tr>
+	<td style="text-align:center;">cw</td>
+	<td style="text-align:left;">dw + &lt;insert&gt;-mode</td>
+</tr>
+<tr>
+	<td style="text-align:center;">cb</td>
+	<td style="text-align:left;">db + &lt;insert&gt;-mode</td>
+</tr>
+<tr>
+	<td style="text-align:center;">dd</td>
+	<td style="text-align:left;">delete current line</td>
+</tr>
+<tr>
+	<td style="text-align:center;">cc</td>
+	<td style="text-align:left;">dd + &lt;insert&gt;-mode</td>
+</tr>
+<tr>
+	<td style="text-align:center;">dj</td>
+	<td style="text-align:left;">Delete line + line+1</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Delete (special)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">dt + &lt;char&gt;</td>
+	<td style="text-align:left;">Delete everything from cursor to &lt;char&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">ct + &lt;char&gt;</td>
+	<td style="text-align:left;">dt + &lt;char&gt; + &lt;insert&gt;-mode</td>
+</tr>
+<tr>
+	<td style="text-align:center;">di + &lt;char&gt;</td>
+	<td style="text-align:left;">Delete everything inbetween &lt;char&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:center;">ci + &lt;char&gt;</td>
+	<td style="text-align:left;">di + &lt;char&gt; + &lt;insert&gt;-mode</td>
+</tr>
+<tr>
+	<td style="text-align:center;">da + &lt;char&gt;</td>
+	<td style="text-align:left;">Delete everything inbetween &lt;char&gt; incl. itself</td>
+</tr>
+<tr>
+	<td style="text-align:center;">ca + &lt;char&gt;</td>
+	<td style="text-align:left;">Delete everything inbetween &lt;char&gt; incl. itself + &lt;insert&gt;-mode</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Copy / Paste</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">p</td>
+	<td style="text-align:left;">Paste after cursor</td>
+</tr>
+<tr>
+	<td style="text-align:center;">&#8679; + P</td>
+	<td style="text-align:left;">Paster before cursor</td>
+</tr>
+<tr>
+	<td style="text-align:center;">yw</td>
+	<td style="text-align:left;">Copy word</td>
+</tr>
+<tr>
+	<td style="text-align:center;">yy</td>
+	<td style="text-align:left;">Copy line</td>
+</tr>
+<tr>
+	<td style="text-align:center;">y0</td>
+	<td style="text-align:left;">Copy from cursor to start of line</td>
+</tr>
+<tr>
+	<td style="text-align:center;">y + <code>ctrl</code> + g</td>
+	<td style="text-align:left;">Copy from cursor to last line file</td>
+</tr>
+<tr>
+	<td style="text-align:center;">10yj</td>
+	<td style="text-align:left;">Copy current line and 10 lines beneath it</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">General</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;"><code>ctrl</code> + g</td>
+	<td style="text-align:left;">See some general information about the current file in the statusbar</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Key</th>
+	<th style="text-align:left;">Macro&#8217;s</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">q + &lt;char&gt;</td>
+	<td style="text-align:left;">Register and record macro. Stop recording by hitting <code>q</code></td>
+</tr>
+<tr>
+	<td style="text-align:center;">@ + &lt;char&gt;</td>
+	<td style="text-align:left;">Execute macro</td>
+</tr>
+<tr>
+	<td style="text-align:center;">@@</td>
+	<td style="text-align:left;">Execute last used macro</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</body>
+</html>
