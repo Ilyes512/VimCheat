@@ -18,7 +18,6 @@
 
 | Key | Word Navigation
 |:---:|---
-| h | &#8592;
 | w | Go to the start of the next word
 | &#8679; + W | Go to the start of the next WORD
 | e | Go to the end of the next word
