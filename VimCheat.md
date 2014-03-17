@@ -41,7 +41,6 @@
 | &#8679; + G | Go to end of file
 | \<i\> +  &#8679; + G | Go to start of line \<i\> #1
 | :\<i\> | Go to start of line \<i\> #2
-| :\<i\> | Go to start of line \<i\>
 | &#8679; + $ | Go to end of line
 | &#8679; + ^ | Go to start of line (non-WS*)
 | 0 | Go to start of line
